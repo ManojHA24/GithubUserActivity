@@ -1,4 +1,4 @@
-module github.io/ManojHA24/GithubUserActivity
+module github.com/ManojHA24/GithubUserActivity
 
 go 1.21.6
 
