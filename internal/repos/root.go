@@ -6,7 +6,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var reposCmd = &cobra.Command{
+var ReposCmd = &cobra.Command{
 	Use:   "repos",
 	Short: "Manage repositories",
 	Long:  `Commands to manage and view repositories in a GitHub user account.`,
@@ -21,6 +21,6 @@ func listRepos(cmd *cobra.Command, args []string) error {
 }
 
 func init() {
-	reposCmd.Flags().String("user", "", "GitHub username to list repositories for")
+	ReposCmd.Flags().String("user", "", "GitHub username to list repositories for")
 	// reposCmd.MarkFlagRequired("user") // Make the user flag required
 }

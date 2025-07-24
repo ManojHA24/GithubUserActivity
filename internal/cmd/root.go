@@ -4,7 +4,10 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/ManojHA24/GithubUserActivity/internal/commits"
 	"github.com/ManojHA24/GithubUserActivity/internal/issues"
+	"github.com/ManojHA24/GithubUserActivity/internal/pullrequests"
+	"github.com/ManojHA24/GithubUserActivity/internal/repos"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -40,8 +43,8 @@ func Init() {
 	rootCmd.PersistentFlags().String("token", "", "GitHub Token (or set GITHUB_TOKEN)")
 	viper.BindPFlag("GITHUB_TOKEN", rootCmd.PersistentFlags().Lookup("token"))
 
-	rootCmd.AddCommand(commits.commitsCmd)
+	rootCmd.AddCommand(commits.CommitsCmd)
 	rootCmd.AddCommand(issues.IssuesCmd)
-	rootCmd.AddCommand(pullrequests.pullRequestsCmd)
-	rootCmd.AddCommand(repos.reposCmd)
+	rootCmd.AddCommand(pullrequests.PullRequestsCmd)
+	rootCmd.AddCommand(repos.ReposCmd)
 }

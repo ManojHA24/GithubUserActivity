@@ -6,7 +6,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var commitsCmd = &cobra.Command{
+var CommitsCmd = &cobra.Command{
 	Use:   "commits",
 	Short: "Manage commits",
 	Long:  `Commands to manage and view commits in a GitHub repository.`,
@@ -14,8 +14,8 @@ var commitsCmd = &cobra.Command{
 }
 
 func init() {
-	commitsCmd.Flags().String("start-date", "", "Start date for listing commits")
-	commitsCmd.Flags().String("end-date", "", "End date for listing commits")
+	CommitsCmd.Flags().String("start-date", "", "Start date for listing commits")
+	CommitsCmd.Flags().String("end-date", "", "End date for listing commits")
 }
 
 func listCommits(cmd *cobra.Command, args []string) error {

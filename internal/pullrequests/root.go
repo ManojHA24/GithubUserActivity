@@ -6,7 +6,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var pullRequestsCmd = &cobra.Command{
+var PullRequestsCmd = &cobra.Command{
 	Use:   "pullrequests",
 	Short: "Manage pull requests",
 	Long:  `Commands to manage and view pull requests in a GitHub repository.`,
@@ -20,7 +20,7 @@ func listPullRequests(cmd *cobra.Command, args []string) error {
 	return nil
 }
 func init() {
-	pullRequestsCmd.Flags().String("state", "open", "State of the pull requests (open, closed, all)")
-	pullRequestsCmd.Flags().String("base", "", "Base branch for filtering pull requests")
-	pullRequestsCmd.Flags().String("head", "", "Head branch for filtering pull requests")
+	PullRequestsCmd.Flags().String("state", "open", "State of the pull requests (open, closed, all)")
+	PullRequestsCmd.Flags().String("base", "", "Base branch for filtering pull requests")
+	PullRequestsCmd.Flags().String("head", "", "Head branch for filtering pull requests")
 }
